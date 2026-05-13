@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tourist Arrivals by Entry Type (2020-2023)",
+    "subtitle": "Land crossings dominate due to Singapore-Johor traffic. Data: OpenDOSM",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
+  },
+  "width": 340,
+  "height": 340,
+  "data": {"url": "data/entry_type.csv"},
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 90, "outerRadius": 160, "padAngle": 0.02, "cornerRadius": 4},
+      "encoding": {
+        "theta": {"field": "arrivals", "type": "quantitative"},
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "title": "Entry Type",
+          "scale": {
+            "domain": ["Air", "Land", "Sea"],
+            "range": ["#3498db", "#e67e22", "#2ecc71"]
+          },
+          "legend": {
+            "title": "Entry Type",
+            "titleFontSize": 11,
+            "symbolSize": 120,
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {"field": "type", "type": "nominal", "title": "Entry Type"},
+          {"field": "arrivals", "type": "quantitative", "title": "Total Arrivals", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 200, "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {
+        "theta": {"field": "arrivals", "type": "quantitative", "stack": true},
+        "text": {"field": "type", "type": "nominal"},
+        "color": {"value": "#2c3e50"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
+}

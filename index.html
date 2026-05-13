@@ -8,7 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Malaysia Tourism Analysis</h1>
@@ -18,13 +21,23 @@
     <div id="vis3" class="visualization"></div>
     <div id="vis4" class="visualization"></div>
     <div id="vis5" class="visualization"></div>
+    <div id="vis6" class="visualization"></div>
+    <div id="vis7" class="visualization"></div>
+    <div id="vis8" class="visualization"></div>
+    <div id="vis9" class="visualization"></div>
+    <div id="vis10" class="visualization"></div>
 
     <script type="text/javascript">
-        vegaEmbed('#vis1', 'vis1.vg.json', {actions: true});
-        vegaEmbed('#vis2', 'vis2.vg.json', {actions: true});
-        vegaEmbed('#vis3', 'vis3.vg.json', {actions: true});
-        vegaEmbed('#vis4', 'vis4.vg.json', {actions: true});
-        vegaEmbed('#vis5', 'vis5.vg.json', {actions: true});
+        vegaEmbed('#vis1', 'vis1.vg.json', {actions: false});
+        vegaEmbed('#vis2', 'vis2.vg.json', {actions: false});
+        vegaEmbed('#vis3', 'vis3.vg.json', {actions: false});
+        vegaEmbed('#vis4', 'vis4.vg.json', {actions: false});
+        vegaEmbed('#vis5', 'vis5.vg.json', {actions: false});
+        vegaEmbed('#vis6', 'vis6.vg.json', {actions: false});
+        vegaEmbed('#vis7', 'vis7.vg.json', {actions: false});
+        vegaEmbed('#vis8', 'vis8.vg.json', {actions: false});
+        vegaEmbed('#vis9', 'vis9.vg.json', {actions: false});
+        vegaEmbed('#vis10', 'vis10.vg.json', {actions: false});
     </script>
 </body>
 </html>

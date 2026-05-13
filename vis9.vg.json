@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Monthly Country Rankings - Top 8 Tourist Sources (2025)",
+    "subtitle": "Track how each country's rank shifts across months. Data: Tourism Malaysia",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
+  },
+  "width": 680,
+  "height": 360,
+  "data": {"url": "data/monthly_rank.csv"},
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "opacity": 0.85,
+        "point": {"filled": true, "size": 70}
+      },
+      "encoding": {
+        "x": {
+          "field": "month_num",
+          "type": "ordinal",
+          "title": "Month",
+          "axis": {
+            "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value - 1]",
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "title": "Rank",
+          "scale": {"domain": [8.5, 0.5]},
+          "axis": {
+            "tickCount": 8,
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "values": [1, 2, 3, 4, 5, 6, 7, 8]
+          }
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "title": "Country",
+          "scale": {
+            "scheme": "tableau10"
+          },
+          "legend": {
+            "title": "Country",
+            "titleFontSize": 11,
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {"field": "month", "type": "nominal", "title": "Month"},
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"},
+          {"field": "arrivals", "type": "quantitative", "title": "Arrivals", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "transform": [{"filter": "datum.month_num == 12"}],
+      "encoding": {
+        "x": {"field": "month_num", "type": "ordinal"},
+        "y": {"field": "rank", "type": "quantitative"},
+        "text": {"field": "country", "type": "nominal"},
+        "color": {"field": "country", "type": "nominal", "scale": {"scheme": "tableau10"}}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa",
+    "axis": {"grid": true, "gridOpacity": 0.3}
+  }
+}

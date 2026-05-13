@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Gender Split of Tourist Arrivals by Entry Type (2020-2023)",
+    "subtitle": "Male tourists consistently outnumber female across all entry types. Data: OpenDOSM",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
+  },
+  "width": 420,
+  "height": 280,
+  "data": {"url": "data/gender_by_type.csv"},
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3},
+      "encoding": {
+        "x": {
+          "field": "type",
+          "type": "nominal",
+          "title": "Entry Type",
+          "axis": {"labelFontSize": 13, "titleFontSize": 13}
+        },
+        "y": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "title": "Total Arrivals",
+          "stack": "normalize",
+          "axis": {
+            "format": "%",
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "color": {
+          "field": "gender",
+          "type": "nominal",
+          "title": "Gender",
+          "scale": {
+            "domain": ["Male", "Female"],
+            "range": ["#2e86c1", "#e91e8c"]
+          },
+          "legend": {
+            "title": "Gender",
+            "titleFontSize": 11,
+            "symbolSize": 120,
+            "orient": "top-right"
+          }
+        },
+        "tooltip": [
+          {"field": "type", "type": "nominal", "title": "Entry Type"},
+          {"field": "gender", "type": "nominal", "title": "Gender"},
+          {"field": "arrivals", "type": "quantitative", "title": "Arrivals", "format": ","},
+          {"field": "pct", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "white"
+      },
+      "encoding": {
+        "x": {"field": "type", "type": "nominal"},
+        "y": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "text": {
+          "field": "pct",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "detail": {"field": "gender", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
+}

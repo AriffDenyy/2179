@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Recovery of Tourist Arrivals by Entry Type (2020-2023)",
+    "subtitle": "Land crossings led the recovery after border reopening. Data: OpenDOSM",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
+  },
+  "width": 600,
+  "height": 380,
+  "data": {"url": "data/entry_type_by_year.csv"},
+  "mark": {
+    "type": "area",
+    "opacity": 0.85,
+    "line": {"strokeWidth": 1.5}
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelFontSize": 13,
+        "titleFontSize": 13,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "arrivals",
+      "type": "quantitative",
+      "title": "Total Arrivals",
+      "stack": "zero",
+      "axis": {
+        "format": ".2s",
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "title": "Entry Type",
+      "scale": {
+        "domain": ["Air", "Land", "Sea"],
+        "range": ["#3498db", "#e67e22", "#2ecc71"]
+      },
+      "legend": {
+        "title": "Entry Type",
+        "titleFontSize": 11,
+        "symbolSize": 120,
+        "orient": "top-right"
+      }
+    },
+    "order": {"field": "type", "sort": "descending"},
+    "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "type", "type": "nominal", "title": "Entry Type"},
+      {"field": "arrivals", "type": "quantitative", "title": "Arrivals", "format": ","}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
+}

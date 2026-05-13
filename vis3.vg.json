@@ -12,6 +12,18 @@
   "width": 700,
   "height": 400,
   "data": {"url": "data/annual_recovery.csv"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelFontSize": 13,
+        "titleFontSize": 13,
+        "labelAngle": 0
+      }
+    }
+  },
   "layer": [
     {
       "mark": {
@@ -20,8 +32,8 @@
         "opacity": 0.6
       },
       "encoding": {
-        "x": {"datum": 2019.5, "type": "quantitative"},
-        "x2": {"datum": 2021.5},
+        "x": {"datum": "2020", "type": "ordinal"},
+        "x2": {"datum": "2021"},
         "y": {"value": 0},
         "y2": {"value": 400}
       }
@@ -34,38 +46,27 @@
         "fontSize": 11,
         "fontStyle": "italic",
         "align": "center",
-        "dy": 20
+        "dy": 16,
+        "dx": 49
       },
       "encoding": {
-        "x": {"datum": 2020.5, "type": "quantitative"},
+        "x": {"datum": "2020", "type": "ordinal"},
         "y": {"value": 0}
       }
     },
     {
       "mark": {
         "type": "area",
-        "line": true,
         "color": "#2980b9",
-        "opacity": 0.15,
-        "point": false
+        "opacity": 0.12,
+        "line": false
       },
       "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative",
-          "axis": {
-            "title": "Year",
-            "format": "d",
-            "tickCount": 7,
-            "labelFontSize": 12,
-            "titleFontSize": 13
-          }
-        },
         "y": {
           "field": "arrivals",
           "type": "quantitative",
+          "title": "Tourist Arrivals",
           "axis": {
-            "title": "Tourist Arrivals",
             "format": ".2s",
             "labelFontSize": 12,
             "titleFontSize": 13
@@ -85,10 +86,12 @@
         }
       },
       "encoding": {
-        "x": {"field": "year", "type": "quantitative"},
-        "y": {"field": "arrivals", "type": "quantitative"},
+        "y": {
+          "field": "arrivals",
+          "type": "quantitative"
+        },
         "tooltip": [
-          {"field": "year", "type": "quantitative", "title": "Year"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
           {"field": "arrivals", "type": "quantitative", "title": "Arrivals", "format": ","},
           {"field": "label", "type": "nominal", "title": "Note"}
         ]
@@ -104,7 +107,6 @@
         "color": "#2c3e50"
       },
       "encoding": {
-        "x": {"field": "year", "type": "quantitative"},
         "y": {"field": "arrivals", "type": "quantitative"},
         "text": {"field": "arrivals", "type": "quantitative", "format": ".2s"}
       }
