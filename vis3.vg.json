@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Malaysia Tourism Recovery (2019-2025)",
+    "subtitle": "Total international tourist arrivals per year. Data: Tourism Malaysia",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
+  },
+  "width": 700,
+  "height": 400,
+  "data": {"url": "data/annual_recovery.csv"},
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "color": "#fff3cd",
+        "opacity": 0.6
+      },
+      "encoding": {
+        "x": {"datum": 2019.5, "type": "quantitative"},
+        "x2": {"datum": 2021.5},
+        "y": {"value": 0},
+        "y2": {"value": 400}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "text": "MCO / Border Closure",
+        "color": "#c0392b",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "align": "center",
+        "dy": 20
+      },
+      "encoding": {
+        "x": {"datum": 2020.5, "type": "quantitative"},
+        "y": {"value": 0}
+      }
+    },
+    {
+      "mark": {
+        "type": "area",
+        "line": true,
+        "color": "#2980b9",
+        "opacity": 0.15,
+        "point": false
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "axis": {
+            "title": "Year",
+            "format": "d",
+            "tickCount": 7,
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "axis": {
+            "title": "Tourist Arrivals",
+            "format": ".2s",
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#2980b9",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 80,
+          "color": "#2980b9"
+        }
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "arrivals", "type": "quantitative"},
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year"},
+          {"field": "arrivals", "type": "quantitative", "title": "Arrivals", "format": ","},
+          {"field": "label", "type": "nominal", "title": "Note"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -14,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#2c3e50"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "arrivals", "type": "quantitative"},
+        "text": {"field": "arrivals", "type": "quantitative", "format": ".2s"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
+}
