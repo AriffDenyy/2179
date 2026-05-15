@@ -3,8 +3,11 @@
   "title": {
     "text": "Venue Ratings by Category",
     "subtitle": "Distribution of customer ratings across sports facility types. Filter by state.",
-    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
-    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
   },
   "params": [
     {
@@ -12,41 +15,104 @@
       "value": "All",
       "bind": {
         "input": "select",
-        "options": ["All","Selangor","Kuala Lumpur","Johor","Perak","Kedah","Sarawak","Sabah","Negeri Sembilan","Pahang","Terengganu","Penang","Melaka","Kelantan","Putrajaya","Perlis"],
+        "options": [
+          "All",
+          "Selangor",
+          "Kuala Lumpur",
+          "Johor",
+          "Perak",
+          "Kedah",
+          "Sarawak",
+          "Sabah",
+          "Negeri Sembilan",
+          "Pahang",
+          "Terengganu",
+          "Penang",
+          "Melaka",
+          "Kelantan",
+          "Putrajaya",
+          "Perlis"
+        ],
         "name": "Filter by State: "
       }
     }
   ],
-  "width": 600, "height": 380,
-  "data": {"url": "data/ratings_by_category.csv"},
+  "width": 650,
+  "height": 420,
+  "data": {
+    "url": "data/ratings_by_category.csv"
+  },
   "transform": [
-    {"filter": "state_select == 'All' || datum.state == state_select"}
-  ],
-  "layer": [
     {
-      "mark": {"type": "boxplot", "extent": "min-max", "size": 30, "outliers": {"size": 20, "opacity": 0.4}},
-      "encoding": {
-        "y": {
-          "field": "category", "type": "nominal", "title": null,
-          "sort": {"field": "rating", "op": "mean", "order": "descending"},
-          "axis": {"labelFontSize": 12}
-        },
-        "x": {
-          "field": "rating", "type": "quantitative", "title": "Customer Rating",
-          "scale": {"domain": [2, 5.2]},
-          "axis": {"labelFontSize": 11, "titleFontSize": 13}
-        },
-        "color": {
-          "field": "category", "type": "nominal",
-          "scale": {"scheme": "tableau10"}, "legend": null
-        },
-        "tooltip": [
-          {"field": "category", "type": "nominal", "title": "Category"},
-          {"field": "rating", "type": "quantitative", "title": "Rating", "format": ".1f"},
-          {"field": "name", "type": "nominal", "title": "Venue"}
-        ]
-      }
+      "filter": "state_select == 'All' || datum.state == state_select"
     }
   ],
-  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max",
+    "size": 30,
+    "outliers": {
+      "size": 15,
+      "opacity": 0.4
+    },
+    "color": "#3498db"
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "rating",
+        "op": "mean",
+        "order": "descending"
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "labelAngle": -35,
+        "labelLimit": 150
+      }
+    },
+    "y": {
+      "field": "rating",
+      "type": "quantitative",
+      "title": "Customer Rating",
+      "scale": {
+        "domain": [
+          2,
+          5.5
+        ]
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "titleFontSize": 13,
+        "gridColor": "#f0f0f0"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "field": "rating",
+        "type": "quantitative",
+        "title": "Rating",
+        "format": ".1f"
+      },
+      {
+        "field": "name",
+        "type": "nominal",
+        "title": "Venue"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
 }

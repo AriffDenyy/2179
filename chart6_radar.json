@@ -26,23 +26,23 @@
   "data": [
     {
       "name": "grid_paths",
-      "url": "data/radar_grid_paths.csv",
+      "url": "data/radar_grid_paths.json",
       "format": {
-        "type": "csv"
+        "type": "json"
       }
     },
     {
       "name": "polygon",
-      "url": "data/radar_polygon.csv",
+      "url": "data/radar_polygon.json",
       "format": {
-        "type": "csv"
+        "type": "json"
       }
     },
     {
       "name": "axes",
-      "url": "data/radar_axes.csv",
+      "url": "data/radar_axes.json",
       "format": {
-        "type": "csv"
+        "type": "json"
       }
     }
   ],

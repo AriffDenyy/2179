@@ -3,8 +3,11 @@
   "title": {
     "text": "Age Distribution by Workout Type",
     "subtitle": "Which age groups prefer which workouts? Filter by gender.",
-    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
-    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d"
   },
   "params": [
     {
@@ -12,7 +15,11 @@
       "value": "All",
       "bind": {
         "input": "select",
-        "options": ["All", "Male", "Female"],
+        "options": [
+          "All",
+          "Male",
+          "Female"
+        ],
         "name": "Filter by Gender: "
       }
     },
@@ -21,38 +28,105 @@
       "value": "All",
       "bind": {
         "input": "select",
-        "options": ["All", "Cardio", "HIIT", "Strength", "Yoga"],
+        "options": [
+          "All",
+          "Cardio",
+          "HIIT",
+          "Strength",
+          "Yoga"
+        ],
         "name": "Filter by Workout: "
       }
     }
   ],
-  "width": 580, "height": 340,
-  "data": {"url": "data/age_by_workout.csv"},
+  "width": 580,
+  "height": 340,
+  "data": {
+    "url": "data/age_by_workout.csv"
+  },
   "transform": [
-    {"filter": "gender_select == 'All' || datum.gender == gender_select"},
-    {"filter": "workout_select == 'All' || datum.workout_type == workout_select"}
+    {
+      "filter": "gender_select == 'All' || datum.gender == gender_select"
+    },
+    {
+      "filter": "workout_select == 'All' || datum.workout_type == workout_select"
+    }
   ],
-  "mark": {"type": "bar", "opacity": 0.85},
+  "mark": {
+    "type": "bar",
+    "opacity": 0.85
+  },
   "encoding": {
     "x": {
-      "bin": {"step": 5}, "field": "age", "type": "quantitative",
+      "bin": {
+        "step": 5
+      },
+      "field": "age",
+      "type": "quantitative",
       "title": "Age Group",
-      "axis": {"labelFontSize": 12, "titleFontSize": 13}
+      "axis": {
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
     },
     "y": {
-      "aggregate": "count", "type": "quantitative", "title": "Number of Members",
-      "axis": {"labelFontSize": 11, "titleFontSize": 13}
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Members",
+      "axis": {
+        "labelFontSize": 11,
+        "titleFontSize": 13
+      }
     },
     "color": {
-      "field": "workout_type", "type": "nominal", "title": "Workout Type",
-      "scale": {"scheme": "tableau10"},
-      "legend": {"title": "Workout Type", "titleFontSize": 11}
+      "field": "workout_type",
+      "type": "nominal",
+      "title": "Workout Type",
+      "scale": {
+        "domain": [
+          "Cardio",
+          "HIIT",
+          "Strength",
+          "Yoga"
+        ],
+        "range": [
+          "#0072B2",
+          "#E69F00",
+          "#D55E00",
+          "#56B4E9"
+        ]
+      },
+      "legend": {
+        "title": "Workout Type",
+        "titleFontSize": 11
+      }
     },
     "tooltip": [
-      {"bin": {"step": 5}, "field": "age", "type": "quantitative", "title": "Age Group"},
-      {"field": "workout_type", "type": "nominal", "title": "Workout Type"},
-      {"aggregate": "count", "type": "quantitative", "title": "Members"}
+      {
+        "bin": {
+          "step": 5
+        },
+        "field": "age",
+        "type": "quantitative",
+        "title": "Age Group"
+      },
+      {
+        "field": "workout_type",
+        "type": "nominal",
+        "title": "Workout Type"
+      },
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Members"
+      }
     ]
   },
-  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
 }
