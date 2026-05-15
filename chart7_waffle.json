@@ -14,7 +14,7 @@
       "groupby": ["workout_type"]
     },
     {
-      "calculate": "datum.workout_type + ' — ' + datum.cell_count + '%'",
+      "calculate": "datum.workout_type + ' - ' + datum.cell_count + '%'",
       "as": "legend_label"
     },
     {
