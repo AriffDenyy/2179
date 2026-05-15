@@ -6,86 +6,165 @@
   "title": {
     "text": "Average Time Spent at Venues by Category",
     "subtitle": "Each axis = one category. Distance from centre = average hours spent. Data: Sports & Fitness POI Dataset",
-    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
-    "color": "#2c3e50", "subtitleColor": "#7f8c8d", "offset": 10
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#2c3e50",
+    "subtitleColor": "#7f8c8d",
+    "offset": 10
   },
   "signals": [
-    {"name": "cx", "update": "width / 2"},
-    {"name": "cy", "update": "height / 2"}
+    {
+      "name": "cx",
+      "update": "width / 2"
+    },
+    {
+      "name": "cy",
+      "update": "height / 2"
+    }
   ],
   "data": [
     {
       "name": "grid_paths",
       "url": "data/radar_grid_paths.csv",
-      "format": {"type": "csv"}
+      "format": {
+        "type": "csv"
+      }
     },
     {
       "name": "polygon",
       "url": "data/radar_polygon.csv",
-      "format": {"type": "csv"}
+      "format": {
+        "type": "csv"
+      }
     },
     {
       "name": "axes",
       "url": "data/radar_axes.csv",
-      "format": {"type": "csv"}
+      "format": {
+        "type": "csv"
+      }
     }
   ],
   "marks": [
     {
       "type": "path",
-      "from": {"data": "grid_paths"},
+      "from": {
+        "data": "grid_paths"
+      },
       "encode": {
         "enter": {
-          "path": {"field": "path"},
-          "x": {"signal": "cx"},
-          "y": {"signal": "cy"},
-          "stroke": {"value": "#ccc"},
-          "strokeWidth": {"value": 0.8},
-          "strokeDash": {"value": [4, 3]},
-          "fill": {"value": "transparent"}
+          "path": {
+            "field": "path"
+          },
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "stroke": {
+            "value": "#ccc"
+          },
+          "strokeWidth": {
+            "value": 0.8
+          },
+          "strokeDash": {
+            "value": [
+              4,
+              3
+            ]
+          },
+          "fill": {
+            "value": "transparent"
+          }
         }
       }
     },
     {
       "type": "rule",
-      "from": {"data": "axes"},
+      "from": {
+        "data": "axes"
+      },
       "encode": {
         "enter": {
-          "x": {"signal": "cx"},
-          "y": {"signal": "cy"},
-          "x2": {"signal": "cx + datum.ax"},
-          "y2": {"signal": "cy + datum.ay"},
-          "stroke": {"value": "#ccc"},
-          "strokeWidth": {"value": 1}
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "x2": {
+            "signal": "cx + datum.ax"
+          },
+          "y2": {
+            "signal": "cy + datum.ay"
+          },
+          "stroke": {
+            "value": "#ccc"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
         }
       }
     },
     {
       "type": "path",
-      "from": {"data": "polygon"},
+      "from": {
+        "data": "polygon"
+      },
       "encode": {
         "enter": {
-          "path": {"field": "path"},
-          "x": {"signal": "cx"},
-          "y": {"signal": "cy"},
-          "stroke": {"value": "#27ae60"},
-          "strokeWidth": {"value": 2.5},
-          "fill": {"value": "#27ae60"},
-          "fillOpacity": {"value": 0.25}
+          "path": {
+            "field": "path"
+          },
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "stroke": {
+            "value": "#27ae60"
+          },
+          "strokeWidth": {
+            "value": 2.5
+          },
+          "fill": {
+            "value": "#27ae60"
+          },
+          "fillOpacity": {
+            "value": 0.25
+          }
         }
       }
     },
     {
       "type": "symbol",
-      "from": {"data": "axes"},
+      "from": {
+        "data": "axes"
+      },
       "encode": {
         "enter": {
-          "x": {"signal": "cx + datum.dx"},
-          "y": {"signal": "cy + datum.dy"},
-          "size": {"value": 70},
-          "fill": {"value": "#27ae60"},
-          "stroke": {"value": "white"},
-          "strokeWidth": {"value": 1.5},
+          "x": {
+            "signal": "cx + datum.dx"
+          },
+          "y": {
+            "signal": "cy + datum.dy"
+          },
+          "size": {
+            "value": 70
+          },
+          "fill": {
+            "value": "#27ae60"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
           "tooltip": {
             "signal": "{'Category': datum.category, 'Avg Hours': format(datum.avg_hours, '.2f') + ' hrs', 'Venues': datum.count}"
           }
@@ -94,31 +173,63 @@
     },
     {
       "type": "text",
-      "from": {"data": "axes"},
+      "from": {
+        "data": "axes"
+      },
       "encode": {
         "enter": {
-          "x": {"signal": "cx + datum.lx"},
-          "y": {"signal": "cy + datum.ly"},
-          "text": {"field": "category"},
-          "align": {"field": "align"},
-          "baseline": {"value": "middle"},
-          "fontSize": {"value": 11},
-          "fontWeight": {"value": "bold"},
-          "fill": {"value": "#2c3e50"},
-          "limit": {"value": 150}
+          "x": {
+            "signal": "cx + datum.lx"
+          },
+          "y": {
+            "signal": "cy + datum.ly"
+          },
+          "text": {
+            "field": "category"
+          },
+          "align": {
+            "field": "align"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#2c3e50"
+          },
+          "limit": {
+            "value": 150
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": {"data": "grid_paths"},
+      "from": {
+        "data": "grid_paths"
+      },
       "encode": {
         "enter": {
-          "x": {"signal": "cx + 5"},
-          "y": {"signal": "cy + datum.label_y"},
-          "text": {"field": "label"},
-          "fill": {"value": "#aaa"},
-          "fontSize": {"value": 9}
+          "x": {
+            "signal": "cx + 5"
+          },
+          "y": {
+            "signal": "cy + datum.label_y"
+          },
+          "text": {
+            "field": "label"
+          },
+          "fill": {
+            "value": "#aaa"
+          },
+          "fontSize": {
+            "value": 9
+          }
         }
       }
     }
