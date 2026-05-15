@@ -37,7 +37,7 @@
       }
     }
   ],
-  "width": 650,
+  "width": 1100,
   "height": 420,
   "data": {
     "url": "data/ratings_by_category.csv"
@@ -113,6 +113,6 @@
       "stroke": null
     },
     "font": "Segoe UI, Arial, sans-serif",
-    "background": "#fafafa"
+    "background": "#ffffff"
   }
 }

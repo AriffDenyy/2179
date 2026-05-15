@@ -9,8 +9,8 @@
     "color": "#2c3e50",
     "subtitleColor": "#7f8c8d"
   },
-  "width": 340,
-  "height": 340,
+  "width": 440,
+  "height": 440,
   "data": {
     "url": "data/bmi_categories.csv"
   },
@@ -108,6 +108,6 @@
       "stroke": null
     },
     "font": "Segoe UI, Arial, sans-serif",
-    "background": "#fafafa"
+    "background": "#ffffff"
   }
 }

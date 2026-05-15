@@ -39,8 +39,8 @@
       }
     }
   ],
-  "width": 580,
-  "height": 340,
+  "width": 1010,
+  "height": 500,
   "data": {
     "url": "data/age_by_workout.csv"
   },
@@ -127,6 +127,6 @@
       "stroke": null
     },
     "font": "Segoe UI, Arial, sans-serif",
-    "background": "#fafafa"
+    "background": "#ffffff"
   }
 }

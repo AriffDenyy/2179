@@ -27,7 +27,7 @@
       "bind": {"input": "range", "min": 19, "max": 65, "step": 1, "name": "Max Age: "}
     }
   ],
-  "width": 600, "height": 400,
+  "width": 380, "height": 400,
   "data": {"url": "data/bmi_vs_calories.csv"},
   "transform": [
     {"filter": "gender_select == 'All' || datum.gender == gender_select"},
@@ -63,5 +63,5 @@
       {"field": "age", "type": "quantitative", "title": "Age"}
     ]
   },
-  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#ffffff"}
 }

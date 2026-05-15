@@ -2,15 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Workout Type Distribution Among Gym Members",
-    "subtitle": "Each square = 1% of members (100 squares total). Strength and Cardio are most popular. Data: Gym Members Exercise Tracking",
+    "subtitle": "Each square = 1% of members (100 squares total).",
     "fontSize": 16,
     "subtitleFontSize": 12,
     "anchor": "start",
     "color": "#2c3e50",
     "subtitleColor": "#7f8c8d"
   },
-  "width": 320,
-  "height": 320,
+  "width": 315,
+  "height": 315,
   "data": {
     "url": "data/waffle_workout.csv"
   },
@@ -118,7 +118,7 @@
       "stroke": null
     },
     "font": "Segoe UI, Arial, sans-serif",
-    "background": "#fafafa",
+    "background": "#ffffff",
     "axis": {
       "grid": false
     }

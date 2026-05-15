@@ -1,43 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malaysia Tourism Visualizations</title>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports & Fitness in Malaysia</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* - Layout - */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #3a2a1a;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    /* - Outer white container - */
+    .container {
+      background: #ffffff;
+      max-width: 1300px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(92,56,20,0.10);
+    }
+
+    /* - Hero - */
+    .hero {
+      background-color: #ffeedd;
+      border-bottom: 2px solid #e8c9a0;
+      padding: 3.5rem 4rem 2.5rem;
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #b5712a;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: #5c3814;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .hero-desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #7a5535;
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1.5px solid #c9955a;
+      color: #854f1a;
+      background: transparent;
+    }
+
+    /* - Page wrapper - */
+    .page-content {
+      padding: 0 3rem 4rem;
+    }
+
+    /* - Section - */
+    .story-section {
+      padding: 3rem 0 0;
+    }
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .section-badge {
+      flex-shrink: 0;
+      margin-top: 4px;
+      background: #5c3814;
+      color: #ffeedd;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #5c3814;
+      margin-bottom: .4rem;
+      line-height: 1.25;
+    }
+    .section-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #6b4a2a;
+      max-width: 820px;
+    }
+
+    /* - Insight callout - */
+    .insight {
+      display: flex;
+      align-items: flex-start;
+      gap: .85rem;
+      background: #fff8f0;
+      border-left: 4px solid #c9955a;
+      border-radius: 0 8px 8px 0;
+      padding: .9rem 1.1rem;
+      margin: 1.1rem 0 1.25rem;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #5c3814;
+      max-width: 820px;
+    }
+    .insight-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .insight strong { font-weight: 700; }
+
+    /* - Transition - */
+    .transition {
+      margin: 2.5rem -3rem 0;
+      padding: 1.25rem 3rem;
+      background: #fdf5ec;
+      border-top: 1px solid #e8c9a0;
+      border-bottom: 1px solid #e8c9a0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #7a5535;
+      text-align: center;
+    }
+
+    /* - Chart cards - */
+    .visualization {
+      background: #ffffff;
+      border: 1px solid #e8d5be;
+      border-radius: 12px;
+      align-items: center;
+      padding: 24px;
+      margin: 1rem 0;
+      overflow: hidden;
+    }
+    .visualization > div { width: 100% !important; }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    /* - Footer - */
+    footer {
+      background: #5c3814;
+      color: #ffeedd;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-top: 3rem;
+    }
+    footer strong { font-weight: 700; }
+
+    @media (max-width: 700px) {
+      body { padding: 1rem; }
+      .hero { padding: 2rem 1.5rem; }
+      .page-content { padding: 0 1.25rem 3rem; }
+      .transition { margin: 2.5rem -1.25rem 0; padding: 1.25rem; }
+      .chart-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Sports & Fitness in Malaysia - Where People Work Out and How</h1>
-    
-    <div id="chart1" class="visualization"></div>
-    <div id="chart2" class="visualization"></div>
-    <div id="chart3" class="visualization"></div>
-    <div id="chart4" class="visualization"></div>
-    <div id="chart5" class="visualization"></div>
-    <div id="chart6" class="visualization"></div>
-    <div id="chart7" class="visualization"></div>
-    <div id="chart8" class="visualization"></div>
-    <div id="chart9" class="visualization"></div>
-    <div id="chart10" class="visualization"></div>
 
-    <script type="text/javascript">
-        vegaEmbed('#chart1', 'chart1_venue_bubble_map.json');
-        vegaEmbed('#chart2', 'chart2_venues_choropleth.json');
-        vegaEmbed('#chart3', 'chart3_treemap.json');
-        vegaEmbed('#chart4', 'chart4_ratings_by_category.json');
-        vegaEmbed('#chart5', 'chart6_radar.json');
-        vegaEmbed('#chart6', 'chart7_waffle.json');
-        vegaEmbed('#chart7', 'chart8_bmi_vs_calories.json');
-        vegaEmbed('#chart8', 'chart9_freq_vs_experience.json');
-        vegaEmbed('#chart9', 'chart11_age_by_workout.json');
-        vegaEmbed('#chart10', 'chart12_bmi_donut.json');
-    </script>
+  <div class="container">
+
+  <!-- = HERO = -->
+  <div class="hero">
+    <div class="hero-eyebrow">FIT2179 · Data Visualisation II</div>
+    <h1>Sports &amp; Fitness in Malaysia -<br>Where People Work Out and How</h1>
+    <p class="hero-desc">
+      Malaysia has thousands of sports and fitness venues spread across its 16 states.
+      But where are they concentrated, what types dominate, and who actually uses them?
+      This visualisation tells that story - from the national map all the way to the gym floor.
+    </p>
+    <!-- <div class="hero-pills">
+      <span class="pill">Sports &amp; Fitness POI Dataset</span>
+      <span class="pill">Gym Members Exercise Tracking</span>
+      <span class="pill">16 states · 15 categories</span>
+    </div> -->
+  </div>
+
+  <div class="page-content">
+
+    <!-- = SECTION 1 = -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-badge">Section 1</span>
+        <div>
+          <div class="section-title">The landscape - where are the venues?</div>
+          <p class="section-desc">
+            Sports and fitness venues are not evenly distributed across Malaysia.
+            Peninsular Malaysia - especially the Klang Valley - is home to the vast majority,
+            while East Malaysia (Sarawak and Sabah) remains comparatively underserved.
+            Use the map controls to zoom into each state and explore venue density by category.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon"></span>
+        <span><strong>Key insight:</strong> Selangor leads with 349 venues - more than double the next highest state -
+        reflecting the concentration of urban population and commercial activity around the Klang Valley.</span>
+      </div>
+      <div class="visualization" id="chart1"></div>
+      <div class="visualization" id="chart2"></div>
+    </div>
+
+    <div class="transition">
+      Now that we know <em>where</em> venues are - what kinds of facilities do Malaysians actually have access to?
+    </div>
+
+    <!-- = SECTION 2 = -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-badge">Section 2</span>
+        <div>
+          <div class="section-title">What's available - types of venues</div>
+          <p class="section-desc">
+            Gyms &amp; Studios dominate the venue landscape with 366 facilities nationally,
+            followed by Fishing &amp; Hunting and Recreation Centers.
+            Niche categories like Paintball &amp; Laser and Snow &amp; Winter Sports exist but remain rare.
+            The radar chart reveals that Golf and Skating demand the most time - over 2 hours on average per visit.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon"></span>
+        <span><strong>Key insight:</strong> Despite gyms being the most numerous venue type, Fishing &amp; Hunting ranks second -
+        a reminder that outdoor recreation remains deeply embedded in Malaysian leisure culture.</span>
+      </div>
+      <div class="chart-grid">
+        <div class="visualization" id="chart3"></div>
+        <div class="visualization" id="chart5"></div>
+      </div>
+    </div>
+
+    <div class="transition">
+      Quantity is one thing - but are these venues actually good? Let's look at what customers say.
+    </div>
+
+    <!-- = SECTION 3 = -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-badge">Section 3</span>
+        <div>
+          <div class="section-title">Quality of experience - how venues are rated</div>
+          <p class="section-desc">
+            Customer ratings across all 15 venue categories cluster tightly between 4.0 and 4.5 stars,
+            suggesting consistent quality regardless of venue type.
+            Martial Arts &amp; Dojos and Racquet &amp; Club Sports show the tightest distributions,
+            while Gyms &amp; Studios display more variability - not all gyms are created equal.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon"></span>
+        <span><strong>Key insight:</strong> No category averages below 4.0, suggesting Malaysians have access to genuinely
+        good facilities. The outliers worth watching are individual low-rated venues pulling down the floor of otherwise
+        strong categories.</span>
+      </div>
+      <div class="visualization" id="chart4"></div>
+    </div>
+
+    <div class="transition">
+      We've seen the venues from the outside. Now let's step inside - who are the people actually working out?
+    </div>
+
+    <!-- = SECTION 4 = -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-badge">Section 4</span>
+        <div>
+          <div class="section-title">Inside the gym - who works out and how</div>
+          <p class="section-desc">
+            Strength training and Cardio are the dominant workout types, together accounting for over 60% of gym activity.
+            Younger members (20-35) gravitate toward high-intensity formats, while older age groups favour Yoga and steady Cardio.
+            Beginners tend to train 2-3 days a week; advanced members push to 4-5 days.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon"></span>
+        <span><strong>Key insight:</strong> The 40-50 age group has the highest total member count - suggesting
+        mid-life health awareness is a key driver of gym attendance in Malaysia.</span>
+      </div>
+      <div class="chart-grid">
+        <div class="visualization" id="chart6"></div>
+        <div class="visualization" id="chart8"></div>
+      </div>
+      <div class="visualization" id="chart9"></div>
+    </div>
+
+    <div class="transition">
+      Finally - what does the health profile of gym-goers look like, and does working harder actually make a difference?
+    </div>
+
+    <!-- = SECTION 5 = -->
+    <div class="story-section">
+      <div class="section-header">
+        <span class="section-badge">Section 5</span>
+        <div>
+          <div class="section-title">Fitness outcomes - BMI, calories and experience</div>
+          <p class="section-desc">
+            Advanced gym members burn significantly more calories per session, regardless of BMI.
+            Most gym-goers fall within the Normal BMI range, but a notable share are Overweight or Obese -
+            indicating that gyms are actively serving people on a health improvement journey,
+            not just those who are already fit.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon"></span>
+        <span><strong>Key insight:</strong> BMI alone doesn't predict calorie burn - experience level does.
+        An advanced member with a high BMI consistently outperforms a beginner with a low one,
+        reinforcing the value of consistency over starting point.</span>
+      </div>
+      <div class="chart-grid">
+        <div class="visualization" id="chart7"></div>
+        <div class="visualization" id="chart10"></div>
+      </div>
+    </div>
+
+  </div><!-- end page-content -->
+
+  <footer>
+    <strong>Sports &amp; Fitness in Malaysia - Where People Work Out and How</strong><br>
+    Data: Sports &amp; Fitness POI Dataset · Gym Members Exercise Tracking<br>
+    FIT2179 Data Visualisation · Monash University Malaysia
+  </footer>
+
+  </div><!-- end container -->
+
+  <script>
+    const opts = { actions: false, renderer: 'svg' };
+    vegaEmbed('#chart1',  'chart1_venue_bubble_map.json',       opts);
+    vegaEmbed('#chart2',  'chart2_venues_choropleth.json',       opts);
+    vegaEmbed('#chart3',  'chart3_treemap.json',                 opts);
+    vegaEmbed('#chart4',  'chart4_ratings_by_category.json',     opts);
+    vegaEmbed('#chart5',  'chart6_radar.json',                   opts);
+    vegaEmbed('#chart6',  'chart7_waffle.json',                  opts);
+    vegaEmbed('#chart7',  'chart8_bmi_vs_calories.json',         opts);
+    vegaEmbed('#chart8',  'chart9_freq_vs_experience.json',      opts);
+    vegaEmbed('#chart9',  'chart11_age_by_workout.json',         opts);
+    vegaEmbed('#chart10', 'chart12_bmi_donut.json',              opts);
+  </script>
 </body>
 </html>

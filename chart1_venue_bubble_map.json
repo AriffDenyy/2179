@@ -27,7 +27,7 @@
       "bind": {
         "input": "range",
         "min": 800,
-        "max": 50000,
+        "max": 70000,
         "step": 100,
         "name": "Zoom: "
       }
@@ -77,7 +77,7 @@
   }
 }
   ],
-  "width": 750, "height": 500,
+  "width": 950, "height": 500,
   "projection": {
     "type": "mercator",
     "center": {"expr": "center_to"},
