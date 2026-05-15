@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Sports & Fitness Venues by Category - Treemap",
+  "width": 650,
+  "height": 430,
+  "padding": 5,
+  "title": {
+    "text": "Sports & Fitness Venues by Category",
+    "subtitle": "Rectangle size = number of venues. Data: Sports & Fitness POI Dataset",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d",
+    "offset": 10
+  },
+  "data": [
+    {
+      "name": "source",
+      "url": "data/venues_by_category.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {"type": "filter", "expr": "datum.count > 0"},
+        {
+          "type": "nest",
+          "keys": ["category"]
+        },
+        {
+          "type": "treemap",
+          "field": "count",
+          "sort": {"field": "value", "order": "descending"},
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.6,
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "source", "field": "category"},
+      "range": {"scheme": "tableau20"}
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "source"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0"},
+          "x2": {"field": "x1"},
+          "y": {"field": "y0"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "category"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 2},
+          "cornerRadius": {"value": 2},
+          "tooltip": {
+            "signal": "{'Category': datum.category, 'Venues': datum.count}"
+          }
+        },
+        "update": {"fillOpacity": {"value": 0.9}},
+        "hover": {"fillOpacity": {"value": 1}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "source"},
+      "encode": {
+        "enter": {
+          "x": {"signal": "(datum.x0 + datum.x1) / 2"},
+          "y": {"signal": "(datum.y0 + datum.y1) / 2"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "white"},
+          "fontWeight": {"value": "bold"},
+          "fontSize": {"value": 11},
+          "limit": {"signal": "datum.x1 - datum.x0 - 8"},
+          "text": {"signal": "datum.count > 20 ? datum.category + ' (' + datum.count + ')' : datum.count > 5 ? datum.count : ''"}
+        }
+      }
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "title": "Category",
+      "orient": "right",
+      "titleFontSize": 11,
+      "labelLimit": 200
+    }
+  ],
+  "config": {"font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+}

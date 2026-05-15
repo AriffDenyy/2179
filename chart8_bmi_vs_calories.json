@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "BMI vs Calories Burned by Experience Level",
+    "subtitle": "Advanced members tend to burn more calories. Filter by age range and gender.",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+  },
+  "params": [
+    {
+      "name": "gender_select",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Male", "Female"],
+        "name": "Filter by Gender: "
+      }
+    },
+    {
+      "name": "age_min",
+      "value": 18,
+      "bind": {"input": "range", "min": 18, "max": 59, "step": 1, "name": "Min Age: "}
+    },
+    {
+      "name": "age_max",
+      "value": 65,
+      "bind": {"input": "range", "min": 19, "max": 65, "step": 1, "name": "Max Age: "}
+    }
+  ],
+  "width": 600, "height": 400,
+  "data": {"url": "data/bmi_vs_calories.csv"},
+  "transform": [
+    {"filter": "gender_select == 'All' || datum.gender == gender_select"},
+    {"filter": "datum.age >= age_min && datum.age <= age_max"}
+  ],
+  "mark": {"type": "point", "filled": true, "opacity": 0.6, "size": 55},
+  "encoding": {
+    "x": {
+      "field": "bmi", "type": "quantitative", "title": "BMI",
+      "axis": {"labelFontSize": 11, "titleFontSize": 13}
+    },
+    "y": {
+      "field": "calories", "type": "quantitative", "title": "Calories Burned",
+      "axis": {"labelFontSize": 11, "titleFontSize": 13}
+    },
+    "color": {
+      "field": "experience", "type": "nominal", "title": "Experience Level",
+      "scale": {
+        "domain": ["Beginner","Intermediate","Advanced"],
+        "range": ["#3498db","#f39c12","#e74c3c"]
+      },
+      "legend": {"title": "Experience Level", "titleFontSize": 11}
+    },
+    "shape": {
+      "field": "gender", "type": "nominal", "title": "Gender",
+      "legend": {"title": "Gender", "titleFontSize": 11}
+    },
+    "tooltip": [
+      {"field": "bmi", "type": "quantitative", "title": "BMI", "format": ".1f"},
+      {"field": "calories", "type": "quantitative", "title": "Calories Burned", "format": ".0f"},
+      {"field": "experience", "type": "nominal", "title": "Experience"},
+      {"field": "gender", "type": "nominal", "title": "Gender"},
+      {"field": "age", "type": "quantitative", "title": "Age"}
+    ]
+  },
+  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+}

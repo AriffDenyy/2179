@@ -1,0 +1,810 @@
+state,category,hours
+Selangor,Recreation Centers,2.5
+Johor,Gyms & Studios,3.0
+Kuala Lumpur,Gyms & Studios,2.0
+Melaka,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.0
+Negeri Sembilan,Recreation Centers,2.5
+Selangor,Gyms & Studios,3.5
+Kedah,Gyms & Studios,2.0
+Selangor,Recreation Centers,2.0
+Johor,Gyms & Studios,1.5
+Kelantan,Fishing & Hunting,4.0
+Selangor,Golf & Driving Ranges,4.0
+Perak,Fishing & Hunting,4.0
+Selangor,Recreation Centers,2.0
+Selangor,Recreation Centers,2.5
+Selangor,Fishing & Hunting,1.0
+Sabah,Fishing & Hunting,4.0
+Selangor,Recreation Centers,4.0
+Kuala Lumpur,Gyms & Studios,4.0
+Kuala Lumpur,Gyms & Studios,2.0
+Sarawak,Recreation Centers,3.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,3.5
+Selangor,Gyms & Studios,1.0
+Selangor,Gyms & Studios,2.5
+Sarawak,Gyms & Studios,3.5
+Selangor,Recreation Centers,2.5
+Sabah,Gyms & Studios,2.5
+Selangor,Fishing & Hunting,4.0
+Kuala Lumpur,Team Sports & Fields,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Saunas & Spas,2.0
+Selangor,Fishing & Hunting,4.0
+Kuala Lumpur,Saunas & Spas,3.5
+Selangor,Team Sports & Fields,2.0
+Selangor,Other Outdoor & Lawn Sports,2.0
+Kuala Lumpur,Ball Sports,2.5
+Johor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.5
+Negeri Sembilan,Snow & Winter Sports,3.5
+Selangor,Saunas & Spas,1.0
+Selangor,Saunas & Spas,1.5
+Perak,Fishing & Hunting,2.5
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Team Sports & Fields,2.5
+Johor,Fishing & Hunting,4.0
+Johor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Fishing & Hunting,4.0
+Johor,Recreation Centers,2.0
+Selangor,Recreation Centers,2.5
+Kuala Lumpur,Recreation Centers,1.0
+Sabah,Fishing & Hunting,1.5
+Perak,Fishing & Hunting,4.0
+Johor,Other Outdoor & Lawn Sports,4.0
+Pahang,Team Sports & Fields,4.0
+Negeri Sembilan,Gyms & Studios,1.5
+Johor,Fishing & Hunting,4.0
+Kuala Lumpur,Recreation Centers,1.0
+Perak,Fishing & Hunting,2.5
+Johor,Fishing & Hunting,4.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Perak,Recreation Centers,3.0
+Putrajaya,Skating & Rinks,2.5
+Selangor,Golf & Driving Ranges,4.0
+Kedah,Other Outdoor & Lawn Sports,2.5
+Selangor,Recreation Centers,1.0
+Selangor,Snow & Winter Sports,3.0
+Johor,Gyms & Studios,1.5
+Johor,Team Sports & Fields,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Golf & Driving Ranges,2.0
+Selangor,Gyms & Studios,2.0
+Kedah,Gyms & Studios,2.0
+Pahang,Recreation Centers,3.0
+Johor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Sabah,Water & Aquatic Sports,1.5
+Johor,Gyms & Studios,2.5
+Selangor,Recreation Centers,2.5
+Kuala Lumpur,Water & Aquatic Sports,1.5
+Kuala Lumpur,Golf & Driving Ranges,2.0
+Pahang,Golf & Driving Ranges,2.0
+Johor,Golf & Driving Ranges,3.0
+Putrajaya,Recreation Centers,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Johor,Recreation Centers,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,1.5
+Kedah,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,2.0
+Penang,Golf & Driving Ranges,3.0
+Sarawak,Recreation Centers,2.5
+Perak,Recreation Centers,2.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,3.0
+Selangor,Fishing & Hunting,1.5
+Johor,Recreation Centers,2.5
+Perak,Gyms & Studios,3.5
+Kuala Lumpur,Recreation Centers,2.0
+Kuala Lumpur,Gyms & Studios,1.5
+Kelantan,Golf & Driving Ranges,3.5
+Negeri Sembilan,Gyms & Studios,2.0
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,4.0
+Penang,Gyms & Studios,2.0
+Pahang,Ball Sports,2.0
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Recreation Centers,3.0
+Kuala Lumpur,Golf & Driving Ranges,2.0
+Negeri Sembilan,Gyms & Studios,1.5
+Selangor,Recreation Centers,2.5
+Selangor,Recreation Centers,3.5
+Selangor,Fishing & Hunting,4.0
+Johor,Saunas & Spas,3.0
+Negeri Sembilan,Gyms & Studios,2.0
+Negeri Sembilan,Gyms & Studios,2.0
+Johor,Other Outdoor & Lawn Sports,2.5
+Selangor,Golf & Driving Ranges,3.5
+Johor,Ball Sports,2.5
+Kuala Lumpur,Saunas & Spas,2.5
+Perak,Fishing & Hunting,1.5
+Selangor,Other Outdoor & Lawn Sports,3.0
+Johor,Gyms & Studios,2.0
+Melaka,Recreation Centers,2.5
+Selangor,Shooting & Gun Ranges,2.5
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Gyms & Studios,2.5
+Negeri Sembilan,Golf & Driving Ranges,4.0
+Johor,Gyms & Studios,2.0
+Penang,Gyms & Studios,3.0
+Penang,Gyms & Studios,3.5
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.5
+Kelantan,Saunas & Spas,3.5
+Kuala Lumpur,Martial Arts & Dojos,3.0
+Selangor,Martial Arts & Dojos,2.5
+Selangor,Martial Arts & Dojos,4.0
+Sarawak,Martial Arts & Dojos,2.5
+Perak,Saunas & Spas,2.0
+Johor,Recreation Centers,1.5
+Selangor,Fishing & Hunting,4.0
+Selangor,Fishing & Hunting,4.0
+Selangor,Team Sports & Fields,3.5
+Sarawak,Gyms & Studios,1.5
+Sarawak,Saunas & Spas,2.0
+Pahang,Ball Sports,2.5
+Selangor,Team Sports & Fields,2.5
+Negeri Sembilan,Team Sports & Fields,2.5
+Negeri Sembilan,Recreation Centers,2.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Terengganu,Recreation Centers,3.5
+Selangor,Team Sports & Fields,2.5
+Perak,Recreation Centers,2.0
+Perak,Other Outdoor & Lawn Sports,2.5
+Selangor,Team Sports & Fields,2.5
+Terengganu,Recreation Centers,2.0
+Kedah,Other Outdoor & Lawn Sports,2.5
+Melaka,Recreation Centers,2.5
+Kuala Lumpur,Team Sports & Fields,2.5
+Kuala Lumpur,Recreation Centers,3.0
+Sarawak,Gyms & Studios,2.0
+Negeri Sembilan,Gyms & Studios,2.0
+Terengganu,Ball Sports,2.0
+Johor,Ball Sports,1.5
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Recreation Centers,4.0
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Golf & Driving Ranges,2.0
+Pahang,Golf & Driving Ranges,2.5
+Kuala Lumpur,Skating & Rinks,2.0
+Selangor,Fishing & Hunting,4.0
+Johor,Saunas & Spas,2.5
+Johor,Gyms & Studios,2.0
+Negeri Sembilan,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,1.0
+Sabah,Other Outdoor & Lawn Sports,2.5
+Johor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,1.5
+Kedah,Gyms & Studios,2.0
+Pahang,Fishing & Hunting,4.0
+Perak,Other Outdoor & Lawn Sports,2.0
+Johor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Kuala Lumpur,Recreation Centers,4.0
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Gyms & Studios,1.5
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Fishing & Hunting,4.0
+Sarawak,Other Outdoor & Lawn Sports,2.5
+Johor,Gyms & Studios,2.0
+Johor,Gyms & Studios,2.5
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Sabah,Fishing & Hunting,1.0
+Pahang,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Kedah,Golf & Driving Ranges,2.5
+Sarawak,Gyms & Studios,2.5
+Terengganu,Ball Sports,2.0
+Johor,Gyms & Studios,4.0
+Terengganu,Golf & Driving Ranges,3.0
+Selangor,Ball Sports,2.5
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.5
+Terengganu,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Recreation Centers,3.0
+Sarawak,Saunas & Spas,2.0
+Sarawak,Fishing & Hunting,2.0
+Perak,Shooting & Gun Ranges,4.0
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.5
+Kuala Lumpur,Team Sports & Fields,1.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Recreation Centers,2.0
+Perak,Gyms & Studios,2.0
+Pahang,Fishing & Hunting,1.0
+Sarawak,Gyms & Studios,1.0
+Johor,Gyms & Studios,2.5
+Negeri Sembilan,Recreation Centers,2.0
+Sabah,Recreation Centers,3.0
+Selangor,Gyms & Studios,2.0
+Melaka,Recreation Centers,3.5
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Golf & Driving Ranges,2.5
+Selangor,Team Sports & Fields,2.5
+Melaka,Gyms & Studios,2.0
+Johor,Racquet & Club Sports,2.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Sarawak,Fishing & Hunting,4.0
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Recreation Centers,2.5
+Selangor,Fishing & Hunting,1.5
+Selangor,Golf & Driving Ranges,4.0
+Melaka,Golf & Driving Ranges,2.0
+Kelantan,Ball Sports,2.5
+Perak,Gyms & Studios,2.0
+Kelantan,Other Outdoor & Lawn Sports,3.5
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,3.0
+Perak,Gyms & Studios,2.0
+Putrajaya,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.0
+Johor,Other Outdoor & Lawn Sports,2.5
+Sarawak,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Recreation Centers,3.0
+Kuala Lumpur,Recreation Centers,3.0
+Kelantan,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Fishing & Hunting,1.0
+Selangor,Recreation Centers,1.5
+Kedah,Other Outdoor & Lawn Sports,2.5
+Kedah,Fishing & Hunting,3.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Negeri Sembilan,Other Outdoor & Lawn Sports,2.5
+Sarawak,Recreation Centers,2.5
+Sarawak,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,1.5
+Perak,Gyms & Studios,2.0
+Kuala Lumpur,Recreation Centers,2.5
+Selangor,Saunas & Spas,3.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Perak,Fishing & Hunting,4.0
+Selangor,Recreation Centers,1.5
+Selangor,Recreation Centers,2.5
+Terengganu,Fishing & Hunting,4.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.0
+Selangor,Paintball & Laser,4.0
+Selangor,Recreation Centers,2.5
+Johor,Recreation Centers,2.5
+Johor,Gyms & Studios,1.5
+Selangor,Recreation Centers,3.0
+Sabah,Fishing & Hunting,4.0
+Negeri Sembilan,Recreation Centers,2.5
+Selangor,Skating & Rinks,2.0
+Kuala Lumpur,Gyms & Studios,1.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Recreation Centers,1.5
+Johor,Other Outdoor & Lawn Sports,2.5
+Negeri Sembilan,Golf & Driving Ranges,4.0
+Selangor,Fishing & Hunting,4.0
+Johor,Other Outdoor & Lawn Sports,2.0
+Selangor,Team Sports & Fields,2.5
+Sarawak,Gyms & Studios,2.0
+Negeri Sembilan,Gyms & Studios,3.0
+Perak,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Penang,Gyms & Studios,2.0
+Selangor,Golf & Driving Ranges,3.0
+Selangor,Fishing & Hunting,3.5
+Selangor,Gyms & Studios,1.5
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,2.0
+Negeri Sembilan,Recreation Centers,2.0
+Sabah,Martial Arts & Dojos,3.5
+Penang,Gyms & Studios,3.5
+Selangor,Gyms & Studios,2.0
+Penang,Saunas & Spas,2.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Johor,Golf & Driving Ranges,3.5
+Selangor,Fishing & Hunting,4.0
+Pahang,Gyms & Studios,2.0
+Johor,Gyms & Studios,2.5
+Sabah,Fishing & Hunting,4.0
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.0
+Sabah,Golf & Driving Ranges,1.5
+Negeri Sembilan,Recreation Centers,1.5
+Perak,Other Outdoor & Lawn Sports,2.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,1.5
+Selangor,Fishing & Hunting,4.0
+Johor,Other Outdoor & Lawn Sports,2.5
+Johor,Other Outdoor & Lawn Sports,2.5
+Sarawak,Golf & Driving Ranges,2.5
+Selangor,Skating & Rinks,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Fishing & Hunting,4.0
+Johor,Recreation Centers,2.5
+Perak,Recreation Centers,2.5
+Selangor,Fishing & Hunting,4.0
+Johor,Golf & Driving Ranges,3.5
+Sarawak,Fishing & Hunting,1.0
+Selangor,Gyms & Studios,1.5
+Johor,Gyms & Studios,3.5
+Kuala Lumpur,Saunas & Spas,3.0
+Selangor,Gyms & Studios,2.5
+Selangor,Recreation Centers,2.5
+Kedah,Gyms & Studios,2.0
+Melaka,Recreation Centers,2.5
+Selangor,Skating & Rinks,2.5
+Selangor,Gyms & Studios,1.0
+Selangor,Recreation Centers,3.0
+Melaka,Golf & Driving Ranges,4.0
+Selangor,Fishing & Hunting,1.5
+Selangor,Other Outdoor & Lawn Sports,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Terengganu,Gyms & Studios,2.5
+Selangor,Golf & Driving Ranges,4.0
+Kedah,Gyms & Studios,2.0
+Selangor,Recreation Centers,2.5
+Negeri Sembilan,Recreation Centers,2.5
+Selangor,Golf & Driving Ranges,4.0
+Kuala Lumpur,Martial Arts & Dojos,2.0
+Selangor,Gyms & Studios,2.5
+Selangor,Recreation Centers,3.0
+Negeri Sembilan,Gyms & Studios,4.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Golf & Driving Ranges,4.0
+Johor,Golf & Driving Ranges,3.0
+Kuala Lumpur,Racquet & Club Sports,3.0
+Sabah,Gyms & Studios,4.0
+Selangor,Fishing & Hunting,4.0
+Selangor,Fishing & Hunting,1.0
+Sarawak,Gyms & Studios,1.5
+Kedah,Gyms & Studios,2.5
+Selangor,Golf & Driving Ranges,2.5
+Kedah,Water & Aquatic Sports,2.0
+Johor,Fishing & Hunting,2.5
+Sabah,Ball Sports,1.0
+Negeri Sembilan,Recreation Centers,2.0
+Kedah,Gyms & Studios,1.0
+Selangor,Gyms & Studios,2.5
+Kedah,Fishing & Hunting,4.0
+Johor,Gyms & Studios,3.0
+Selangor,Gyms & Studios,1.5
+Johor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Recreation Centers,2.5
+Johor,Gyms & Studios,2.0
+Selangor,Ball Sports,2.5
+Negeri Sembilan,Other Outdoor & Lawn Sports,4.0
+Sarawak,Gyms & Studios,2.0
+Selangor,Other Outdoor & Lawn Sports,3.0
+Selangor,Gyms & Studios,2.0
+Selangor,Golf & Driving Ranges,2.5
+Pahang,Gyms & Studios,1.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Sabah,Saunas & Spas,4.0
+Kuala Lumpur,Gyms & Studios,3.5
+Selangor,Gyms & Studios,2.0
+Selangor,Team Sports & Fields,2.5
+Sabah,Fishing & Hunting,1.0
+Penang,Team Sports & Fields,2.5
+Selangor,Recreation Centers,2.5
+Perak,Other Outdoor & Lawn Sports,2.5
+Sabah,Fishing & Hunting,1.0
+Kelantan,Ball Sports,2.0
+Perak,Gyms & Studios,1.5
+Johor,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,1.5
+Kelantan,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.5
+Putrajaya,Golf & Driving Ranges,4.0
+Selangor,Other Outdoor & Lawn Sports,2.0
+Selangor,Recreation Centers,2.5
+Selangor,Recreation Centers,2.5
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Gyms & Studios,1.5
+Pahang,Gyms & Studios,2.5
+Sarawak,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Sabah,Gyms & Studios,2.0
+Johor,Golf & Driving Ranges,4.0
+Johor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,3.0
+Sarawak,Ball Sports,3.0
+Johor,Fishing & Hunting,1.0
+Selangor,Recreation Centers,4.0
+Penang,Gyms & Studios,2.5
+Selangor,Gyms & Studios,1.5
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Recreation Centers,3.5
+Sabah,Gyms & Studios,2.5
+Johor,Ball Sports,2.5
+Selangor,Other Outdoor & Lawn Sports,3.0
+Johor,Recreation Centers,3.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Golf & Driving Ranges,1.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Negeri Sembilan,Other Outdoor & Lawn Sports,3.0
+Selangor,Gyms & Studios,1.0
+Terengganu,Gyms & Studios,2.0
+Johor,Fishing & Hunting,1.0
+Selangor,Gyms & Studios,2.5
+Selangor,Fishing & Hunting,4.0
+Selangor,Gyms & Studios,1.0
+Putrajaya,Gyms & Studios,2.0
+Selangor,Team Sports & Fields,2.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.5
+Penang,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.0
+Kuala Lumpur,Gyms & Studios,2.5
+Johor,Other Outdoor & Lawn Sports,3.0
+Putrajaya,Recreation Centers,2.0
+Selangor,Gyms & Studios,2.5
+Johor,Golf & Driving Ranges,1.5
+Kedah,Gyms & Studios,2.5
+Selangor,Racquet & Club Sports,3.5
+Sarawak,Gyms & Studios,2.5
+Selangor,Recreation Centers,3.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Recreation Centers,3.5
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.5
+Selangor,Fishing & Hunting,1.5
+Negeri Sembilan,Ball Sports,3.0
+Kedah,Fishing & Hunting,3.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.5
+Penang,Ball Sports,2.5
+Perlis,Ball Sports,3.0
+Perak,Gyms & Studios,2.0
+Selangor,Recreation Centers,2.5
+Pahang,Fishing & Hunting,1.5
+Selangor,Gyms & Studios,2.0
+Johor,Golf & Driving Ranges,4.0
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.0
+Sabah,Team Sports & Fields,2.5
+Selangor,Gyms & Studios,2.0
+Sabah,Recreation Centers,2.0
+Sarawak,Gyms & Studios,2.0
+Kedah,Fishing & Hunting,4.0
+Pahang,Recreation Centers,4.0
+Selangor,Fishing & Hunting,3.5
+Selangor,Fishing & Hunting,1.5
+Negeri Sembilan,Golf & Driving Ranges,4.0
+Kedah,Recreation Centers,2.0
+Selangor,Recreation Centers,3.0
+Johor,Fishing & Hunting,4.0
+Terengganu,Golf & Driving Ranges,2.5
+Kuala Lumpur,Recreation Centers,4.0
+Selangor,Gyms & Studios,4.0
+Johor,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,3.5
+Selangor,Golf & Driving Ranges,2.5
+Sabah,Gyms & Studios,3.5
+Sabah,Water & Aquatic Sports,2.0
+Selangor,Recreation Centers,2.0
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Ball Sports,2.5
+Selangor,Ball Sports,4.0
+Selangor,Gyms & Studios,2.5
+Penang,Gyms & Studios,1.5
+Pahang,Other Outdoor & Lawn Sports,2.5
+Perak,Other Outdoor & Lawn Sports,2.5
+Johor,Fishing & Hunting,2.5
+Perak,Fishing & Hunting,4.0
+Johor,Other Outdoor & Lawn Sports,2.5
+Kuala Lumpur,Gyms & Studios,2.5
+Johor,Gyms & Studios,2.5
+Pahang,Gyms & Studios,2.0
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Selangor,Water & Aquatic Sports,1.5
+Johor,Golf & Driving Ranges,4.0
+Johor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,2.5
+Sarawak,Gyms & Studios,1.5
+Selangor,Team Sports & Fields,3.0
+Selangor,Recreation Centers,3.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Recreation Centers,1.5
+Selangor,Gyms & Studios,2.0
+Kuala Lumpur,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Kuala Lumpur,Ball Sports,1.5
+Selangor,Gyms & Studios,1.5
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,2.5
+Kedah,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,2.0
+Negeri Sembilan,Golf & Driving Ranges,4.0
+Kuala Lumpur,Gyms & Studios,3.5
+Selangor,Gyms & Studios,2.5
+Selangor,Martial Arts & Dojos,2.0
+Sarawak,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,4.0
+Sabah,Gyms & Studios,2.5
+Sarawak,Fishing & Hunting,1.0
+Selangor,Golf & Driving Ranges,1.0
+Selangor,Gyms & Studios,2.0
+Penang,Gyms & Studios,2.5
+Selangor,Gyms & Studios,1.5
+Perak,Gyms & Studios,2.5
+Melaka,Gyms & Studios,2.0
+Sarawak,Gyms & Studios,1.5
+Johor,Gyms & Studios,4.0
+Kuala Lumpur,Skating & Rinks,4.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Negeri Sembilan,Water & Aquatic Sports,1.5
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Saunas & Spas,3.5
+Terengganu,Recreation Centers,4.0
+Selangor,Gyms & Studios,2.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Melaka,Recreation Centers,3.0
+Kuala Lumpur,Golf & Driving Ranges,3.0
+Sabah,Gyms & Studios,2.0
+Johor,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Kedah,Recreation Centers,2.0
+Selangor,Fishing & Hunting,3.0
+Kuala Lumpur,Gyms & Studios,3.5
+Johor,Gyms & Studios,2.5
+Selangor,Recreation Centers,2.5
+Perak,Gyms & Studios,2.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Negeri Sembilan,Golf & Driving Ranges,2.5
+Sarawak,Gyms & Studios,2.0
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Johor,Skating & Rinks,3.0
+Sabah,Recreation Centers,3.0
+Johor,Gyms & Studios,1.5
+Terengganu,Fishing & Hunting,1.5
+Melaka,Gyms & Studios,2.0
+Kuala Lumpur,Saunas & Spas,4.0
+Negeri Sembilan,Fishing & Hunting,2.0
+Selangor,Gyms & Studios,1.0
+Selangor,Gyms & Studios,2.0
+Pahang,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Fishing & Hunting,3.0
+Kuala Lumpur,Gyms & Studios,2.0
+Johor,Gyms & Studios,2.0
+Negeri Sembilan,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Putrajaya,Skating & Rinks,3.5
+Pahang,Fishing & Hunting,4.0
+Selangor,Golf & Driving Ranges,3.0
+Johor,Gyms & Studios,2.0
+Johor,Recreation Centers,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,3.5
+Kuala Lumpur,Other Outdoor & Lawn Sports,3.0
+Selangor,Gyms & Studios,4.0
+Kuala Lumpur,Gyms & Studios,3.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.0
+Johor,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,1.5
+Sarawak,Gyms & Studios,3.0
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,3.5
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Gyms & Studios,4.0
+Selangor,Gyms & Studios,2.0
+Sabah,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,4.0
+Selangor,Golf & Driving Ranges,2.5
+Johor,Gyms & Studios,2.5
+Sarawak,Fishing & Hunting,2.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Water & Aquatic Sports,3.0
+Selangor,Recreation Centers,1.5
+Putrajaya,Gyms & Studios,1.5
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Selangor,Team Sports & Fields,2.5
+Kuala Lumpur,Team Sports & Fields,1.0
+Selangor,Team Sports & Fields,2.5
+Kuala Lumpur,Team Sports & Fields,2.5
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Team Sports & Fields,2.5
+Pahang,Other Outdoor & Lawn Sports,2.5
+Selangor,Recreation Centers,2.5
+Kuala Lumpur,Recreation Centers,2.5
+Kelantan,Other Outdoor & Lawn Sports,2.5
+Johor,Other Outdoor & Lawn Sports,2.5
+Melaka,Fishing & Hunting,3.5
+Selangor,Fishing & Hunting,1.0
+Kedah,Fishing & Hunting,2.5
+Selangor,Recreation Centers,2.5
+Selangor,Fishing & Hunting,3.5
+Johor,Gyms & Studios,2.0
+Johor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,1.5
+Selangor,Gyms & Studios,2.5
+Perak,Gyms & Studios,2.0
+Sabah,Gyms & Studios,2.5
+Sabah,Recreation Centers,3.5
+Selangor,Gyms & Studios,2.5
+Johor,Recreation Centers,2.0
+Terengganu,Team Sports & Fields,2.5
+Kuala Lumpur,Gyms & Studios,4.0
+Kuala Lumpur,Recreation Centers,3.5
+Kedah,Recreation Centers,3.5
+Johor,Saunas & Spas,2.5
+Perak,Other Outdoor & Lawn Sports,2.5
+Selangor,Fishing & Hunting,3.0
+Selangor,Team Sports & Fields,4.0
+Kuala Lumpur,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Negeri Sembilan,Fishing & Hunting,3.5
+Johor,Fishing & Hunting,4.0
+Kuala Lumpur,Other Outdoor & Lawn Sports,2.5
+Kuala Lumpur,Gyms & Studios,2.5
+Kedah,Team Sports & Fields,2.5
+Kuala Lumpur,Fishing & Hunting,1.5
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,2.5
+Perak,Recreation Centers,2.0
+Selangor,Golf & Driving Ranges,4.0
+Selangor,Gyms & Studios,3.0
+Perak,Recreation Centers,2.5
+Sarawak,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Pahang,Recreation Centers,2.5
+Kedah,Fishing & Hunting,1.0
+Sabah,Ball Sports,2.5
+Selangor,Recreation Centers,2.5
+Pahang,Team Sports & Fields,2.5
+Negeri Sembilan,Gyms & Studios,2.5
+Perak,Team Sports & Fields,2.5
+Johor,Recreation Centers,2.0
+Sabah,Fishing & Hunting,1.0
+Melaka,Team Sports & Fields,2.5
+Kuala Lumpur,Gyms & Studios,2.5
+Selangor,Team Sports & Fields,1.0
+Selangor,Fishing & Hunting,2.0
+Selangor,Team Sports & Fields,3.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,1.5
+Johor,Gyms & Studios,3.0
+Selangor,Gyms & Studios,2.0
+Perak,Golf & Driving Ranges,3.0
+Kuala Lumpur,Recreation Centers,2.5
+Selangor,Gyms & Studios,1.5
+Johor,Fishing & Hunting,3.5
+Selangor,Gyms & Studios,2.5
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Penang,Recreation Centers,2.5
+Selangor,Fishing & Hunting,4.0
+Perak,Fishing & Hunting,4.0
+Selangor,Recreation Centers,3.0
+Selangor,Fishing & Hunting,4.0
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.0
+Johor,Gyms & Studios,1.5
+Pahang,Recreation Centers,2.0
+Kuala Lumpur,Gyms & Studios,4.0
+Pahang,Gyms & Studios,2.0
+Selangor,Ball Sports,3.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Team Sports & Fields,2.5
+Selangor,Gyms & Studios,2.0
+Sarawak,Recreation Centers,2.5
+Selangor,Fishing & Hunting,1.0
+Perlis,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,2.5
+Kuala Lumpur,Recreation Centers,2.0
+Johor,Martial Arts & Dojos,2.5
+Johor,Recreation Centers,2.0
+Selangor,Martial Arts & Dojos,1.0
+Penang,Recreation Centers,3.0
+Johor,Recreation Centers,1.5
+Selangor,Gyms & Studios,4.0
+Johor,Fishing & Hunting,4.0
+Johor,Gyms & Studios,2.0
+Selangor,Gyms & Studios,2.5
+Johor,Other Outdoor & Lawn Sports,2.0
+Penang,Gyms & Studios,2.5
+Johor,Team Sports & Fields,2.5
+Kedah,Other Outdoor & Lawn Sports,2.5
+Perak,Other Outdoor & Lawn Sports,2.5
+Johor,Saunas & Spas,2.5
+Sarawak,Other Outdoor & Lawn Sports,3.0
+Selangor,Recreation Centers,3.0
+Johor,Recreation Centers,2.5
+Johor,Gyms & Studios,1.5
+Perak,Gyms & Studios,2.0
+Sarawak,Gyms & Studios,2.5
+Johor,Gyms & Studios,2.0
+Sarawak,Golf & Driving Ranges,3.5
+Negeri Sembilan,Fishing & Hunting,4.0
+Selangor,Golf & Driving Ranges,4.0
+Perak,Gyms & Studios,2.0
+Sabah,Recreation Centers,2.0
+Selangor,Saunas & Spas,4.0
+Johor,Golf & Driving Ranges,2.0
+Selangor,Team Sports & Fields,2.0
+Kuala Lumpur,Gyms & Studios,1.5
+Penang,Team Sports & Fields,2.0
+Melaka,Gyms & Studios,2.0
+Selangor,Gyms & Studios,1.5
+Kuala Lumpur,Gyms & Studios,2.5
+Kedah,Fishing & Hunting,2.0
+Kedah,Recreation Centers,2.5
+Kedah,Other Outdoor & Lawn Sports,2.5
+Kuala Lumpur,Golf & Driving Ranges,2.5
+Perak,Fishing & Hunting,4.0
+Negeri Sembilan,Gyms & Studios,2.0
+Johor,Golf & Driving Ranges,4.0
+Sabah,Recreation Centers,1.0
+Kuala Lumpur,Gyms & Studios,2.0
+Selangor,Fishing & Hunting,1.0
+Selangor,Other Outdoor & Lawn Sports,2.0
+Selangor,Gyms & Studios,2.5
+Penang,Gyms & Studios,2.0
+Selangor,Other Outdoor & Lawn Sports,2.5
+Kuala Lumpur,Skating & Rinks,3.5
+Kuala Lumpur,Gyms & Studios,3.0
+Selangor,Gyms & Studios,2.0
+Selangor,Recreation Centers,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Recreation Centers,1.0
+Sarawak,Gyms & Studios,2.0
+Selangor,Golf & Driving Ranges,3.5
+Selangor,Saunas & Spas,2.5
+Selangor,Fishing & Hunting,4.0
+Sabah,Team Sports & Fields,3.0
+Perak,Other Outdoor & Lawn Sports,2.5
+Selangor,Gyms & Studios,2.0
+Pahang,Gyms & Studios,2.5
+Perlis,Ball Sports,2.5
+Selangor,Gyms & Studios,2.5
+Selangor,Gyms & Studios,4.0
+Selangor,Recreation Centers,2.5
+Johor,Other Outdoor & Lawn Sports,2.0
+Pahang,Ball Sports,1.5
+Selangor,Ball Sports,4.0
+Sabah,Golf & Driving Ranges,1.0
+Perak,Fishing & Hunting,1.0
+Selangor,Fishing & Hunting,4.0
+Kedah,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Kuala Lumpur,Gyms & Studios,2.0
+Sarawak,Gyms & Studios,2.0

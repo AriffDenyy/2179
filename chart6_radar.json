@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 500,
+  "height": 500,
+  "padding": 90,
+  "title": {
+    "text": "Average Time Spent at Venues by Category",
+    "subtitle": "Each axis = one category. Distance from centre = average hours spent. Data: Sports & Fitness POI Dataset",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d", "offset": 10
+  },
+  "signals": [
+    {"name": "radius", "value": 200},
+    {"name": "cx", "update": "width / 2"},
+    {"name": "cy", "update": "height / 2"}
+  ],
+  "data": [
+    {
+      "name": "grid",
+      "url": "data/radar_grid.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {"type": "formula", "as": "x", "expr": "cx + radius * datum.gx"},
+        {"type": "formula", "as": "y", "expr": "cy + radius * datum.gy"}
+      ]
+    },
+    {
+      "name": "poly",
+      "url": "data/radar_poly.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {"type": "formula", "as": "x", "expr": "cx + radius * datum.px"},
+        {"type": "formula", "as": "y", "expr": "cy + radius * datum.py"},
+        {"type": "formula", "as": "labelX", "expr": "cx + radius * datum.lx"},
+        {"type": "formula", "as": "labelY", "expr": "cy + radius * datum.ly"}
+      ]
+    },
+    {
+      "name": "axes",
+      "url": "data/radar_axes.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {"type": "formula", "as": "x2", "expr": "cx + radius * datum.ax"},
+        {"type": "formula", "as": "y2", "expr": "cy + radius * datum.ay"},
+        {"type": "formula", "as": "labelX", "expr": "cx + radius * datum.lx"},
+        {"type": "formula", "as": "labelY", "expr": "cy + radius * datum.ly"}
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {"name": "grid_by_level", "data": "grid", "groupby": "level"}
+      },
+      "marks": [
+        {
+          "type": "line",
+          "from": {"data": "grid_by_level"},
+          "encode": {
+            "enter": {
+              "x": {"field": "x"},
+              "y": {"field": "y"},
+              "stroke": {"value": "#ccc"},
+              "strokeWidth": {"value": 0.8},
+              "strokeDash": {"value": [4, 3]}
+            }
+          },
+          "sort": {"field": "datum.seq"}
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "from": {"data": "axes"},
+      "encode": {
+        "enter": {
+          "x": {"signal": "cx"},
+          "y": {"signal": "cy"},
+          "x2": {"field": "x2"},
+          "y2": {"field": "y2"},
+          "stroke": {"value": "#ccc"},
+          "strokeWidth": {"value": 1}
+        }
+      }
+    },
+    {
+      "type": "line",
+      "from": {"data": "poly"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "stroke": {"value": "#27ae60"},
+          "strokeWidth": {"value": 2.5},
+          "fill": {"value": "#27ae60"},
+          "fillOpacity": {"value": 0.25}
+        }
+      },
+      "sort": {"field": "datum.seq"}
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "poly",
+        "filter": "datum.seq < 11"
+      },
+      "encode": {
+        "enter": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "size": {"value": 70},
+          "fill": {"value": "#27ae60"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 1.5},
+          "tooltip": {
+            "signal": "{'Category': datum.category, 'Avg Hours': format(datum.avg_hours, '.2f') + ' hrs', 'Venues': datum.count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "axes"},
+      "encode": {
+        "enter": {
+          "x": {"field": "labelX"},
+          "y": {"field": "labelY"},
+          "text": {"field": "category"},
+          "align": {"field": "align"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 11},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#2c3e50"},
+          "limit": {"value": 150}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {"signal": "cx + 5"},
+          "y": {"signal": "cy - radius * (1 / 3.5) - 4"},
+          "text": {"value": "1 hr"},
+          "fill": {"value": "#aaa"},
+          "fontSize": {"value": 9}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {"signal": "cx + 5"},
+          "y": {"signal": "cy - radius * (2 / 3.5) - 4"},
+          "text": {"value": "2 hrs"},
+          "fill": {"value": "#aaa"},
+          "fontSize": {"value": 9}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {"signal": "cx + 5"},
+          "y": {"signal": "cy - radius * (3 / 3.5) - 4"},
+          "text": {"value": "3 hrs"},
+          "fill": {"value": "#aaa"},
+          "fontSize": {"value": 9}
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa"
+  }
+}

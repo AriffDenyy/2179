@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Workout Type Distribution Among Gym Members",
+    "subtitle": "Each square = 1% of members (100 squares total). Strength and Cardio are most popular. Data: Gym Members Exercise Tracking",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+  },
+  "width": 320, "height": 320,
+  "data": {"url": "data/waffle_workout.csv"},
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "cell_count"}],
+      "groupby": ["workout_type"]
+    },
+    {
+      "calculate": "datum.workout_type + ' — ' + datum.cell_count + '%'",
+      "as": "legend_label"
+    },
+    {
+      "lookup": "workout_type",
+      "from": {
+        "data": {"url": "data/waffle_workout.csv"},
+        "key": "workout_type",
+        "fields": ["row", "col"]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {"url": "data/waffle_workout.csv"},
+      "mark": {"type": "rect", "width": 28, "height": 28, "cornerRadius": 3},
+      "encoding": {
+        "x": {
+          "field": "col", "type": "ordinal", "axis": null,
+          "scale": {"paddingInner": 0.15, "paddingOuter": 0.05}
+        },
+        "y": {
+          "field": "row", "type": "ordinal", "axis": null,
+          "scale": {"paddingInner": 0.15, "paddingOuter": 0.05},
+          "sort": "descending"
+        },
+        "color": {
+          "field": "workout_type", "type": "nominal",
+          "title": "Workout Type",
+          "scale": {
+            "domain": ["Strength", "Cardio", "Yoga", "HIIT"],
+            "range": ["#e74c3c", "#3498db", "#2ecc71", "#f39c12"]
+          },
+          "legend": {
+            "title": "Workout Type",
+            "titleFontSize": 12,
+            "labelFontSize": 11,
+            "symbolSize": 200,
+            "symbolType": "square",
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {"field": "workout_type", "type": "nominal", "title": "Workout Type"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "background": "#fafafa",
+    "axis": {"grid": false}
+  }
+}

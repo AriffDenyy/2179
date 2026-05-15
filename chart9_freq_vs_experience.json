@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Workout Frequency vs Experience Level",
+    "subtitle": "How often do gym members work out at each experience level? Data: Gym Members Exercise Tracking",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+  },
+  "width": 400, "height": 250,
+  "data": {"url": "data/freq_vs_experience.csv"},
+  "mark": {"type": "rect", "cornerRadius": 3},
+  "encoding": {
+    "x": {
+      "field": "frequency", "type": "ordinal", "title": "Workout Frequency (days/week)",
+      "axis": {"labelFontSize": 12, "titleFontSize": 13}
+    },
+    "y": {
+      "field": "experience", "type": "ordinal", "title": "Experience Level",
+      "sort": ["Beginner","Intermediate","Advanced"],
+      "axis": {"labelFontSize": 12, "titleFontSize": 13}
+    },
+    "color": {
+      "field": "count", "type": "quantitative", "title": "Members",
+      "scale": {"scheme": "blues"},
+      "legend": {"title": "Number of Members", "titleFontSize": 11, "gradientLength": 150}
+    },
+    "tooltip": [
+      {"field": "experience", "type": "nominal", "title": "Experience"},
+      {"field": "frequency", "type": "ordinal", "title": "Days/Week"},
+      {"field": "count", "type": "quantitative", "title": "Members"}
+    ]
+  },
+  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa",
+             "axis": {"grid": false}}
+}

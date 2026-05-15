@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sports & Fitness Venues by State in Malaysia",
+    "subtitle": "Darker green = more venues. Selangor leads with 349 venues. Data: Sports & Fitness POI Dataset",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+  },
+  "width": 750, "height": 500,
+  "projection": {"type": "mercator", "center": [109, 4], "scale": 1800},
+  "layer": [
+    {
+      "data": {
+        "url": "js/ne_10m_admin_1_states_provinces.json",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {"url": "data/venues_by_state.csv"},
+            "key": "state",
+            "fields": ["count"]
+          }
+        },
+        {"filter": "datum.count == null"}
+      ],
+      "mark": {"type": "geoshape", "fill": "#e0e0e0", "stroke": "white", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "js/ne_10m_admin_1_states_provinces.json",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {"url": "data/venues_by_state.csv"},
+            "key": "state",
+            "fields": ["count"]
+          }
+        },
+        {"filter": "datum.count != null"},
+        {
+          "calculate": "datum.count < 20 ? '< 20' : datum.count < 50 ? '20 - 49' : datum.count < 120 ? '50 - 119' : datum.count < 200 ? '120 - 199' : '200+'",
+          "as": "venue_range"
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
+      "encoding": {
+        "color": {
+          "field": "venue_range",
+          "type": "ordinal",
+          "scale": {
+            "domain": ["< 20", "20 - 49", "50 - 119", "120 - 199", "200+"],
+            "range": ["#c7e9c0", "#74c476", "#31a354", "#006d2c", "#00441b"]
+          },
+          "legend": {
+            "title": "Number of Venues",
+            "titleFontSize": 11,
+            "symbolSize": 200,
+            "symbolType": "square",
+            "orient": "bottom-right"
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"},
+          {"field": "count", "type": "quantitative", "title": "Number of Venues"},
+          {"field": "venue_range", "type": "nominal", "title": "Range"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "font": "Segoe UI, Arial, sans-serif",
+    "legend": {
+      "orient": "bottom-right", "padding": 8,
+      "cornerRadius": 4, "fillColor": "white", "strokeColor": "#ddd"
+    }
+  }
+}

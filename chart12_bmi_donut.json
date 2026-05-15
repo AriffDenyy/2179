@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "BMI Category Breakdown of Gym Members",
+    "subtitle": "Most gym-goers fall within the normal BMI range. Data: Gym Members Exercise Tracking",
+    "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
+    "color": "#2c3e50", "subtitleColor": "#7f8c8d"
+  },
+  "width": 340, "height": 340,
+  "data": {"url": "data/bmi_categories.csv"},
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 90, "outerRadius": 160, "padAngle": 0.02, "cornerRadius": 4},
+      "encoding": {
+        "theta": {"field": "count", "type": "quantitative"},
+        "color": {
+          "field": "bmi_category", "type": "nominal", "title": "BMI Category",
+          "scale": {
+            "domain": ["Underweight","Normal","Overweight","Obese"],
+            "range": ["#3498db","#27ae60","#f39c12","#e74c3c"]
+          },
+          "legend": {"title": "BMI Category", "titleFontSize": 11, "orient": "right"}
+        },
+        "tooltip": [
+          {"field": "bmi_category", "type": "nominal", "title": "BMI Category"},
+          {"field": "count", "type": "quantitative", "title": "Members"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 185, "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {
+        "theta": {"field": "count", "type": "quantitative", "stack": true},
+        "text": {"field": "bmi_category", "type": "nominal"},
+        "color": {"value": "#2c3e50"}
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "font": "Segoe UI, Arial, sans-serif", "background": "#fafafa"}
+}

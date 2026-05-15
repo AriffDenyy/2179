@@ -1,0 +1,12 @@
+seq,category,ax,ay,lx,ly,align
+0,Golf & Driving Ranges,0.0,-1.0,0.0,-1.142857,center
+1,Skating & Rinks,0.540641,-0.841254,0.617875,-0.961433,left
+2,Martial Arts & Dojos,0.909632,-0.415415,1.039579,-0.47476,left
+3,Saunas & Spas,0.989821,0.142315,1.131225,0.162646,left
+4,Outdoor & Lawn Sports,0.75575,0.654861,0.863714,0.748412,left
+5,Team Sports & Fields,0.281733,0.959493,0.32198,1.096563,left
+6,Recreation Centers,-0.281733,0.959493,-0.32198,1.096563,right
+7,Ball Sports,-0.75575,0.654861,-0.863714,0.748412,right
+8,Gyms & Studios,-0.989821,0.142315,-1.131225,0.162646,right
+9,Water & Aquatic Sports,-0.909632,-0.415415,-1.039579,-0.47476,right
+10,Fishing & Hunting,-0.540641,-0.841254,-0.617875,-0.961433,right
