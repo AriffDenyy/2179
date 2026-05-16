@@ -6,8 +6,8 @@
     "fontSize": 16, "subtitleFontSize": 12, "anchor": "start",
     "color": "#2c3e50", "subtitleColor": "#7f8c8d"
   },
-  "width": 940, "height": 500,
-  "projection": {"type": "mercator", "center": [109, 4], "scale": 1800},
+  "width":1125, "height": 500,
+  "projection": {"type": "mercator", "center": [111, 4], "scale": 2500},
   "layer": [
     {
       "data": {
@@ -61,7 +61,7 @@
             "titleFontSize": 11,
             "symbolSize": 200,
             "symbolType": "square",
-            "orient": "right"
+            "orient": "top-right"
           }
         },
         "tooltip": [
@@ -77,6 +77,7 @@
     "font": "Segoe UI, Arial, sans-serif",
     "legend": {
       "orient": "right",
+      "offset": 55,
       "padding": 8,
       "cornerRadius": 4,
       "fillColor": "white",

@@ -145,22 +145,33 @@
     }
 
     /* - Chart cards - */
+    /* ...existing code... */
     .visualization {
-      background: #ffffff;
-      border: 1px solid #e8d5be;
-      border-radius: 12px;
-      align-items: center;
-      padding: 24px;
-      margin: 1rem 0;
-      overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e8d5be;
+    border-radius: 12px;
+    align-items: center;
+    padding: 24px;
+    margin: 1rem 0;
+    overflow: hidden;
+    width: 100%;
+    }
+    .visualization,
+    .visualization .vega-embed,
+    .visualization .vega-embed > div,
+    .visualization svg {
+    width: 100% !important;
+    max-width: 100% !important;
     }
     .visualization > div { width: 100% !important; }
+    /* ...existing code... */
 
     .chart-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+    align-items: stretch;
     }
 
     /* - Footer - */
