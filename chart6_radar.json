@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 500,
-  "height": 500,
-  "padding": 90,
+  "width": 380,
+  "height": 380,
+  "padding": 10,
   "title": {
     "text": "Average Time Spent at Venues by Category",
-    "subtitle": "Each axis = one category. Distance from centre = average hours spent. Data: Sports & Fitness POI Dataset",
+    "subtitle": "Data: Sports & Fitness POI Dataset",
     "fontSize": 16,
     "subtitleFontSize": 12,
     "anchor": "start",
@@ -236,6 +236,6 @@
   ],
   "config": {
     "font": "Segoe UI, Arial, sans-serif",
-    "background": "#fafafa"
+    "background": "#ffffff"
   }
 }
